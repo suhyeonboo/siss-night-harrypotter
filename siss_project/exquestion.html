@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo:400" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Harry Potter Domitory</title>
+    <script src='js/result.js'>
+    </script>
+  </head>
+  <style>
+    button {
+      background-color: brown;
+      border-radius: 40px;
+      padding: 40px;
+      font-size: 30px;
+    }
+    div {
+      color: white;
+      text-align: center;
+      width: 600px;
+      margin: auto;
+    }
+    h1 {
+      width: 1000px;
+      margin-left: 20px;
+      text-align: left;
+      margin-top: 80px;
+      padding: 30px;
+    }
+    body {
+      background: black;
+    }
+    button {
+      border: none;
+      width: 500px;
+      padding: 20px;
+      margin-top: 30px;
+      color: white;
+      font-family: 'East Sea Dokdo', cursive;
+      font-size: 50px;
+    }
+    button:hover {
+      background-color: red;
+      box-shadow: 0 5px darkred;
+    }
+    button:active {
+      background-color: red;
+      box-shadow: 0 5px darkred;
+      transform: translateY(4px);
+    }
+    img {
+      width: 200px;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+    }
+    .font {
+        font-family: 'East Sea Dokdo', cursive;
+        font-size: 30px;
+        display: none;
+    }
+    #one {
+      display: block;
+    }
+    .image {
+      margin-left: 50px;
+      margin-top: 50px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300px;
+    }
+  </style>
+  <body>
+    <div class="font" id = 'one'>
+      <h1>입학하기 전,<br>당신의 파트너를 선택할 수 있다.</h1>
+      <button type="button" onclick="
+        document.getElementById('one').style.display = 'none';
+        document.getElementById('two').style.display = 'block';
+        addresult(1, 1);
+      ">작고 귀여운 똑똑한 파트너</button>
+      <button type="button" onclick="
+        document.getElementById('one').style.display = 'none';
+        document.getElementById('two').style.display = 'block';
+        addresult(1, 2);
+      ">크고 멋진 용맹한 파트너</button>
+      <img src=siss_night.jpeg alt='시스인의 밤 로고'>
+    </div>
+
+    <div class="font" id = "two">
+      <h1>새학기에 친구를 사귈 때,<br>당신이 좋아하는 친구의 유형은 ?</h1>
+      <button type="button" onclick="
+        document.getElementById('two').style.display = 'none';
+        document.getElementById('thr').style.display = 'block';
+        addresult(2, 1);
+      ">책임감있고 성실한 친구</button>
+      <button type="button" onclick="
+        document.getElementById('two').style.display = 'none';
+        document.getElementById('thr').style.display = 'block';
+        addresult(2, 2);
+      ">친절하고 따뜻한 친구</button>
+      <img src=siss_night.jpeg alt='시스인의 밤 로고'>
+    </div>
+
+    <div class="font" id = 'thr'>
+      <h1>새학기 전 수강신청 날 !<br>당신이 듣고 싶은 과목은 ?</h1>
+      <button type="button" onclick="
+        document.getElementById('thr').style.display = 'none';
+        document.getElementById('fou').style.display = 'block';
+        addresult(3, 1);
+      ">다른 사람에게 도움이 될 수 있는<br>머글학과 약초학</button>
+      <button type="button" onclick="
+        document.getElementById('thr').style.display = 'none';
+        document.getElementById('fou').style.display = 'block';
+        addresult(3, 2);
+      ">나 자신을 지킬 수 있는<br>어둠의 마법 방어법</button>
+      <img src=siss_night.jpeg alt='시스인의 밤 로고'>
+    </div>
+
+    <div class="font" id = 'fou'>
+      <h1>두 개의 분반이 있다.<br>당신이 선택할 교수님은 ?</h1>
+      <button type="button" onclick="
+        document.getElementById('fou').style.display = 'none';
+        document.getElementById('fiv').style.display = 'block';
+        addresult(4, 1);
+      ">조금은 힘들지만<br>강의력이 짱짱한 교수님</button>
+      <button type="button" onclick="
+        document.getElementById('fou').style.display = 'none';
+        document.getElementById('fiv').style.display = 'block';
+        addresult(4, 2);
+      ">거의 독학이지만<br>친해지고 싶은 교수님</button>
+      <img src=siss_night.jpeg alt='시스인의 밤 로고'>
+    </div>
+
+    <div class="font" id = 'fiv'>
+      <h1>당신의 단짝친구가 시험 중에<br>컨닝을 한다 !</h1>
+      <button type="button" onclick="
+        document.getElementById('fiv').style.display = 'none';
+        document.getElementById('six').style.display = 'block';
+        addresult(5, 1);
+      ">"너 지금 뭐하는거야?"<br>교수님에게 바로 말씀드린다.</button>
+      <button type="button" onclick="
+        document.getElementById('fiv').style.display = 'none';
+        document.getElementById('six').style.display = 'block';
+        addresult(5, 2);
+      ">어떤 사정이 있겠지..<br>마음 속에 묻어둔다.</button>
+      <img src=siss_night.jpeg alt='시스인의 밤 로고'>
+    </div>
+
+    <div class="font" id = 'six'>
+      <h1>지금은 물약 시험 시간 !<br>당신의 선택은 ?(단, 실패 시 C+)</h1>
+      <button type="button" onclick="
+        document.getElementById('six').style.display = 'none';
+        document.getElementById('sev').style.display = 'block';
+        addresult(6, 1);
+      ">100% 성공 확률의<br>B+ 물약 제조</button>
+      <button type="button" onclick="
+        document.getElementById('six').style.display = 'none';
+        document.getElementById('sev').style.display = 'block';
+        addresult(6, 2);
+      ">30% 성공 확률의<br>A+ 물약 제조</button>
+      <img src=siss_night.jpeg alt='시스인의 밤 로고'>
+    </div>
+
+    <div class="font" id = 'sev'>
+      <h1>기숙사에 몬스터가 나타났다 !<br>당신의 선택은 ?</h1>
+      <button type="button" onclick="
+        document.getElementById('sev').style.display = 'none';
+        document.getElementById('eig').style.display = 'block';
+        addresult(7, 1);
+      ">당장 몬스터에게로 가서<br>오늘 배운 마법 기술을 사용한다.</button>
+      <button type="button" onclick="
+        document.getElementById('sev').style.display = 'none';
+        document.getElementById('eig').style.display = 'block';
+        addresult(7, 2);
+      ">친구들이 다치지 않게 보호하고<br>교수님의 지시를 따른다.</button>
+      <img src=siss_night.jpeg alt='시스인의 밤 로고'>
+    </div>
+
+    <div class="font" id = 'eig'>
+      <h1>론의 집에서 밥을 먹게 된 당신<br>그런데 밥에서 머리카락이..!</h1>
+      <button type="button" onclick="
+        document.getElementById('eig').style.display = 'none';
+        document.getElementById('nin').style.display = 'block';
+        addresult(8, 1);
+      ">어머니께서 해주신 음식<br>꾹 참고 그냥 먹는다.</button>
+      <button type="button" onclick="
+        document.getElementById('eig').style.display = 'none';
+        document.getElementById('nin').style.display = 'block';
+        addresult(8, 2);
+      ">"밥에서 머리카락이 나왔네요 ?"<br>태연하게 말씀드린다.</button>
+      <img src=siss_night.jpeg alt='시스인의 밤 로고'>
+    </div>
+
+    <div class="font" id = 'nin'>
+      <img class = "image" src="malfoi.jpeg" alt="말포이">
+      <h1>말포이가 당신에게 와서 말한다.<br>"너는 부모님 빽 말고는 아무것도 아니구나"</h1>
+      <button type="button" onclick="
+        document.getElementById('nin').style.display = 'none';
+        document.getElementById('ten').style.display = 'block';
+        addresult(9, 1);
+      ">"니가 뭔데 ?"<br>뺨 한 대를 후려친다.</button>
+      <button type="button" onclick="
+        document.getElementById('nin').style.display = 'none';
+        document.getElementById('ten').style.display = 'block';
+        addresult(9, 2);
+      ">"맞아 우리 부모님 대단해^^"<br>태연하게 대처한다.</button>
+      <img src=siss_night.jpeg alt='시스인의 밤 로고'>
+    </div>
+
+    <div class="font" id = 'ten'>
+      <h1>학교에 어느정도 적응한 당신,<br>들어가고 싶은 클럽은 ?</h1>
+      <button type="button" onclick="
+        document.getElementById('ten').style.display = 'none';
+        document.getElementById('ele').style.display = 'block';
+        addresult(10, 1);
+      ">공부에는 끝이 없지<br>천문학 클럽</button>
+      <button type="button" onclick="
+        document.getElementById('ten').style.display = 'none';
+        document.getElementById('ele').style.display = 'block';
+        addresult(10, 2);
+      ">동아리를 통해서 친구를 사겨볼까?<br>마법사 카드 모으기 클럽</button>
+      <img src=siss_night.jpeg alt='시스인의 밤 로고'>
+    </div>
+
+    <div class="font" id = 'ele'>
+      <h1>한 가지 능력을 가질 수 있다.<br>당신의 선택은?</h1>
+      <button type="button" onclick="
+        document.getElementById('ele').style.display = 'none';
+        document.getElementById('twe').style.display = 'block';
+        addresult(11, 1);
+      ">겉모습을 바꿀 수 있는 힘</button>
+      <button type="button" onclick="
+        document.getElementById('ele').style.display = 'none';
+        document.getElementById('twe').style.display = 'block';
+        addresult(11, 2);
+      ">동물과 이야기할 수 있는 힘</button>
+      <img src=siss_night.jpeg alt='시스인의 밤 로고'>
+    </div>
+
+    <div class="font" id = 'twe'>
+      <h1>한 가지 능력을 가질 수 있다.<br>당신의 선택은?</h1>
+      <button type="button" onclick="
+        document.getElementById('twe').style.display = 'none';
+        document.getElementById('thi').style.display = 'block';
+        addresult(12, 1);
+      ">과거로 돌아갈 수 있는 힘</button>
+      <button type="button" onclick="
+        document.getElementById('twe').style.display = 'none';
+        document.getElementById('thi').style.display = 'block';
+        addresult(12, 2);
+      ">상대방의 마음을 읽을 수 있는 힘</button>
+      <img src=siss_night.jpeg alt='시스인의 밤 로고'>
+    </div>
+
+    <div class="font" id = 'thi'>
+      <h1>경연대회에 기숙사 대표로 참여한 당신<br>우승할 수 있는 기회가 코앞인데..!</h1>
+      <button type="button" onclick="
+        document.getElementById('thi').style.display = 'none';
+        document.getElementById('for').style.display = 'block';
+        addresult(13, 1);
+      ">위험에 빠진 친구를<br>애써 외면하고 우승한다.</button>
+      <button type="button" onclick="
+        document.getElementById('thi').style.display = 'none';
+        document.getElementById('for').style.display = 'block';
+        addresult(13, 2);
+      ">위험에 빠진 친구를<br>구하고 아쉽게 우승은 놓친다.</button>
+      <img src=siss_night.jpeg alt='시스인의 밤 로고'>
+    </div>
+
+    <div class="font" id = 'for'>
+      <h1>오늘은 당신의 생일 !<br>"선물로 뭐 받고 싶어 ?"</h1>
+      <button type="button" onclick="
+        document.getElementById('for').style.display = 'none';
+        document.getElementById('fif').style.display = 'block';
+        addresult(14, 1);
+      ">친구들과 부모님의<br>정성 가득한 생일파티(선물은 편지)</button>
+      <button type="button" onclick="
+        document.getElementById('for').style.display = 'none';
+        document.getElementById('fif').style.display = 'block';
+        addresult(14, 2);
+      ">생일파티 보다는 돈이지<br>70갈레온(약 50만원)</button>
+      <img src=siss_night.jpeg alt='시스인의 밤 로고'>
+    </div>
+
+    <div class="font" id = 'fif'>
+      <h1>퀴디치 월드컵의 선수로 뽑힌 당신<br>희망하는 포지션은 ?</h1>
+      <button type="button" onclick="
+        document.getElementById('fif').style.display = 'none';
+        document.getElementById('sit').style.display = 'block';
+        addresult(15, 1);
+      ">"상대방 따위는 무섭지 않아"<br>공을 공대에 넣는 추격꾼</button>
+      <button type="button" onclick="
+        document.getElementById('fif').style.display = 'none';
+        document.getElementById('sit').style.display = 'block';
+        addresult(15, 2);
+      ">"나만큼 날렵한 사람은 또 없지"<br>스니치를 쫓아 게임을 끝내는<br>수색꾼</button>
+      <img src=siss_night.jpeg alt='시스인의 밤 로고'>
+    </div>
+
+    <div class="font" id = 'sit'>
+      <h1>벌써 호그와트 막학기 ..<br>당신의 미래는 ?</h1>
+      <button type="button" onclick="
+        addresult(16, 1);
+        location.href = printresult();
+      ">나쁜 애들에 맞서 싸우는<br>불사조 기사단에 들어간다.</button>
+      <button type="button" onclick="
+        addresult(16, 2);
+        location.href = printresult();
+      ">마법이 난 천직이다.<br>호그와트 교수가 된다.</button>
+      <img src=siss_night.jpeg alt='시스인의 밤 로고'>
+    </div>
+  </body>
+</html>
